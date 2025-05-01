@@ -1,9 +1,11 @@
 function sum(a, b) {
     console.log(a + b)
     }
+
     sum (1,6)
 function sum(c, d) {
     console.log(c - d)
+    console.log('passed.')
 }
 sum (5,2)
 function sum(e, f) {
