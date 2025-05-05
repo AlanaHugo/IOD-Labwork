@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Labs8_Roll the Dice</title>
+    <link rel="stylesheet" href="Labs8.css">
+</head>
+<body>
+    <h1>Roll the Dice!</h1>
+    <h2>How to roll the dice</h2>
+    <div>
+    <p >
+        1. Choose from a 6 or 10 face dice <br>
+        2. Hit "Roll!" <br>
+    </p> 
+                <label style="font-family:Arial, Helvetica, sans-serif;font-size: 18px;" 
+        for="dice">Choose how many sides:</label> <br>    
+    <select style="padding:10px,50px,10px,50px"
+    name="dice" id="dice">
+            <option id="10click" value="10">10 </option>
+            <option id="6click" value="6" >6</option>
+        </select>
+        <button style="font-family:Arial, Helvetica, sans-serif;font-size: 18px;"
+        onclick = "result()" > Roll dice!</button> <br>
+<p id="result" style="font-family: Arial, Helvetica, sans-serif;font-size: 50px;color: #FA9D1C;"></p>
+ 
+
+<script src="Labs8.js"></script>
+</body>
+</html>
