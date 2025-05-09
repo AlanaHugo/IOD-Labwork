@@ -1,0 +1,117 @@
+/* I. Selectors */
+/* Put styles for questions 1.1, 1.2, 1.3 and 1.4 here */
+article {
+    margin: 15px 0;
+    padding: 15px;
+    border: 2px solid gray;
+
+}
+
+.style-me1 {
+    color: red;
+}
+
+#style-me2 {
+    color: blue;
+}
+
+p#style-me2.style-me1 {
+    color: purple;
+}
+
+/* Put styles for questions 2.1 and 2.2 here */
+.my-descendants-are-styled p {
+    background-color: red
+}
+
+.my-children-are-styled>p {
+    background-color: lightgreen;
+}
+
+/* II. Box model and common properties */
+/* Put styles for questions 1-8 here */
+.box {
+    background-color: aquamarine;
+    padding: 10px 60px 10px 60px;
+    width: 50% border: 10px thick solid;
+    border-style: double;
+    box-sizing: border-box;
+    overflow: auto;
+    height: 5%;
+    border-radius: 1em;
+}
+
+/* III. Positioning */
+/* Put styles for questions 1-3 here */
+
+.position-absolute {
+    position: absolute;
+    top: 0;
+    background-color: aquamarine;
+}
+
+.position-relative {
+    background-color: cornflowerblue;
+    position: relative; /* 2.3: "relative" = relative to it's normal position, 
+    "absolute" = relative to the nearest ancestor */
+    left: 40px;
+    right: 40px;
+}
+
+.position-sticky {
+    position: sticky;
+    top: 20px;
+}
+
+/* IV. Styling text */
+/* Put styles for questions 1-10 here */
+
+.text-style {
+    color: purple;
+    font-size: 40px;
+    line-height: 2;
+    font-weight: 400;
+    font-family: "Meow Script";
+    text-align: center;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: capitalize;
+    text-decoration:underline;
+
+}
+
+/* V. Styling links */
+/* Put styles for questions 1-3 here */
+
+a:link {
+color: indianred;
+font-size: 30px;
+font-weight: 200;
+text-decoration: underline;    
+}
+a:hover {
+color:black;
+text-decoration:overline
+}
+a:visited {
+    color:red;
+    font-style:italic;
+}
+
+/* VI. calc() */
+/* Put styles for questions 1-3 here */
+
+.calc-style {
+    width: calc(100vw -100px);
+    background-color: forestgreen;
+}
+
+.fixed-width-col {
+    width: 350px;
+    display: inline-block;
+}
+
+.fluid-col {
+    display:inline-block;
+    width: calc(100vw -400px)
+}
