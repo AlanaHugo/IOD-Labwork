@@ -190,6 +190,8 @@ console.log(dog2);
 console.log(cat2);
 console.log(cat1); //updated - they point to the same object
 
+
+
 //10. 
 
 class PersonClass {
@@ -211,4 +213,4 @@ const student3 = new PersonClass('Elenor', 14) // e)
 // console.log(student1); // c) 
 // console.log(student2); // c)
 console.log(student3);
-console.log('can drive: ' + student3.canDrive());
+console.log('can drive: ' + student3.canDrive()); //f)
