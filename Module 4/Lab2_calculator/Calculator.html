@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="Calculator.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+    <script src="Calculator.js"></script>
+</head>
+
+<body>
+    <section id="headingSec">
+        <div class="heading">
+            <h1>The Basic Calculator</h1>
+        </div>
+        <div class="summary">
+            <h2>This is a basic calculator for you to use to add, subtract, muliply and divide two numbers. <br>
+                All you have to do is enter your two numbers, choose your operator and check the result. </h2>
+        </div>
+    </section>
+    <section>
+        <!-- flex container -->
+        <div class="flexContainer">
+            <!-- flexbox-1 -->
+            <div class="input1" id="input1">
+                <label class="label" for="input-1">Enter the first number</label>
+                <input class="input" type="text" id="input-1" name="input-1">
+            </div>
+            <!-- flexbox-2 -->
+            <div class="operators">
+                <button class="opButton" id="add" type="button">+</button>
+                <button class="opButton" id="subtract" type="button">-</button>
+                <button class="opButton" id="multiply" type="button">x</button>
+                <button class="opButton" id="divide" type="button">/</button>
+            </div>
+            <!-- flexbox-3 -->
+            <div class="input2" id="input2">
+                <label class="label" for="input-2">Enter the second number</label>
+                <input class="input" type="text" id="input-2" name="input-2">
+                
+
+            </div>
+        </div>
+<!-- flexContainer 2 -->
+        <div class="flexCont-2">
+            <div>
+                <button class="result-btn" id="result" type="button">Get Result</button>
+            </div>
+            <div>
+                <button class="refresh" id="refresh">Start Over</button>
+
+            </div>
+        </div>
+
+    </section>
+    <div></div>
+
+</body>
+
+</html>
