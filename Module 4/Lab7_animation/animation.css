@@ -1,0 +1,17 @@
+.animation1 {
+    height: 200px;
+    width: 200px;
+    border: solid;
+    background-color: coral;
+    border-color: coral;
+    animation-name: box;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+}
+
+@keyframes box {
+    from { margin-top: 0%; }
+    50% {background-color: aqua; border-color: aqua;}
+    to {margin-top: 100% }
+}
