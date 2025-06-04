@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plant Finder</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="Plants.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Amarante&family=Montserrat&display=swap" rel="stylesheet" />
+</head>
+
+<body class="bodyDet">
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg custom-navbar">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="PlantsHome.html"><img class="nav-img" src="./MP1_logo.png"> The Plant Finder</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+        <div class="d-flex flex-column align-items-end">
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link active" href="Plants_AboutUs.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="Plant_ContactUs.html">Contact</a></li>
+          </ul>
+          <form class="d-flex mt-2" role="search" style="width: 400px;">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Plant Name -->
+  <div class="nameDiv">
+    <h1 class="details-name" id="details-name"></h1>
+  </div>
+  <!-- Content -->
+  <div class="flex-container-details">
+   <div id="plant-details"></div>
+    <div class="details-about">
+      <p><strong>About</strong><br>
+        Maple trees are widely admired for their stunning seasonal colors and distinctive leaf shapes. <br>
+        Found across North America, Europe, and Asia, maples are a popular choice for urban landscaping and natural woodlands alike. <br>
+        Their leaves often turn brilliant shades of red, orange, and yellow in the fall, making them a highlight of
+        autumn scenery. In addition to their beauty, some species—like the sugar maple—are prized for producing maple
+        syrup. <br>
+        Hardy and adaptable, maple trees thrive in a range of climates and soil types.<br><br>
+        Fir trees are evergreen conifers known for their tall, symmetrical shape and fragrant needles. Commonly found in
+        mountainous and cooler regions, firs play a key role in forest ecosystems and are a favorite choice for holiday
+        trees during the winter season. <br>
+        Their needles are soft and flat, and unlike other evergreens, they grow directly
+        from the branches in a spiral pattern. Fir wood is also valued for construction and paper production. With their
+        year-round greenery and classic shape, fir trees add beauty and structure to any landscape.
+      </p>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="PlantData.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(window.location.search);
+      const plantId = parseInt(params.get('id'), 10);
+
+      if (!plantId || !Array.isArray(data)) {
+        document.getElementById('details-name').innerText = 'Invalid plant ID or data not found.';
+        return;
+      }
+
+      const plant = data.find(p => p.id === plantId);
+
+      if (plant) {
+        // Name
+        document.getElementById('details-name').innerText = plant.common_name || 'Unknown Plant';
+
+        // Details
+        document.getElementById('plant-details').innerHTML = `
+          <img src="${plant.image_url || plant.default_image?.original_url || 'MP1_logo.png'}" style="max-width: 250px;" alt="Plant Image">
+          <p><strong>Scientific Name:</strong> ${Array.isArray(plant.scientific_name) ? plant.scientific_name.join(', ') : plant.scientific_name || 'N/A'}</p>
+          <p><strong>Indoor:</strong> ${plant.indoor ? 'Yes' : 'No'}</p>
+          <p><strong>Sunlight:</strong> ${(plant.sunlight || []).join(', ') || 'N/A'}</p>
+        `;
+      } else {
+        document.getElementById('details-name').innerText = 'Plant not found.';
+        document.getElementById('plant-details').innerText = 'No plant data found for this ID.';
+      }
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

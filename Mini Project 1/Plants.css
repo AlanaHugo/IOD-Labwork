@@ -1,0 +1,218 @@
+.amarante-regular {
+  font-family: "Amarante", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* // <weight>: Use a value from 100 to 900
+// <uniquifier>: Use a unique and descriptive class name */
+
+body {
+  background-color: antiquewhite;
+  font-family: "Montserrat", sans-serif;
+
+}
+
+.menu-item {
+  color: #C7EF4E !important;
+}
+
+
+.custom-navbar {
+  background-color: #003310;
+  padding: 10;
+  margin: 0;
+  border: none;
+}
+
+.custom-navbar .nav-link:hover .active:hover {
+  color: white;
+}
+
+.custom-navbar .nav-link,
+.custom-navbar .nav-link.active {
+  color: #C7EF4E;
+}
+
+
+.montserrat-text {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: auto;
+  font-style: normal;
+}
+
+.plant-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.navbar-brand {
+  font-family: "Amarante", serif;
+  font-size: 3em;
+  color: #C7EF4E;
+}
+
+.nav-img {
+  width: 5%;
+  height: auto;
+}
+
+.form-control,
+.btn-outline-success {
+  color: #C7EF4E;
+  border-color: #C7EF4E;
+}
+
+.form-label {
+  color: #003310;
+}
+
+.navbar-brand:hover {
+  color: inherit;
+  text-decoration: none;
+  cursor: default;
+}
+
+.custom-navbar .navbar-brand {
+  color: #C7EF4E;
+  text-decoration: none;
+  cursor: default;
+}
+
+.custom-navbar .navbar-brand:hover,
+.custom-navbar .navbar-brand:focus {
+  color: #C7EF4E !important;
+  text-decoration: none;
+}
+
+/* About Page */
+
+.aboutBanner {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 40px 0px 40px 0px;
+  background-color: antiquewhite;
+  align-items: center;
+  text-align: center;
+  position: relative;
+
+}
+
+.aboutHeader {
+  font-family: "Amarante", serif;
+  font-size: 4em;
+}
+
+.aboutContent {
+  width: 40%;
+  align-content: center;
+
+}
+
+.bodyDet {
+  background-color: antiquewhite !important;
+}
+
+.flex-container-details {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin: 0;
+  padding: 0;
+  gap: 0;
+}
+
+#plant-details,
+.details-about {
+  margin: 0;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.details-about {
+  flex: 1 1 25%;
+}
+
+#plant-details,
+{
+flex: 1 1 75%;
+}
+
+
+#plant-details img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media only screen and (max-width: 600px) {
+  .flex-container-details {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+}
+
+.nameDiv {
+  padding: 10px;
+
+}
+
+/* Animation on About page */
+
+.vine {
+  position: absolute;
+  bottom: 0;
+  right: 10%;
+  max-width: 5%;
+  height: auto;
+  background-repeat: no-repeat;
+  animation-name: about-flower;
+  animation-duration: 20s;
+  animation-fill-mode: forwards;
+
+}
+
+@keyframes about-flower {
+  from {
+    max-width: 5%;
+  }
+
+  to {
+    max-width: 20%;
+  }
+}
+
+/* Contact form styling  */
+
+input[type=text], textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  text-align: left;
+}
+
+textarea {
+  height: 200px;
+}
+
+
+input[type=submit] {
+  background-color: #003310;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #C7EF4E;
+}
+
