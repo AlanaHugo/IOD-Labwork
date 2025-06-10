@@ -1,0 +1,58 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "The Fake eCommerce Store",
+    "description": "A fake eCommerce store that catalogues clothing and accessories",
+    "license": {
+      "name": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
+    }
+  },
+  "host": "localhost:3000",
+  "basePath": "/api",
+  "tags": [
+    {
+      "name": "Store Front",
+      "description": "API for cataloguing fashion"
+    }
+  ],
+  "schemes": ["http"],
+  "consumes": ["application/json"],
+  "produces": ["application/json"],
+  "paths": {
+    "/products": {
+      "get": {
+        "tags": ["Store Front"],
+        "summary": "Get an array of all products available",
+        "description": "Returns all products from the fake store API",
+        "responses": {
+          "200": {
+            "description": "A list of products",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": { "type": "integer" },
+                  "title": { "type": "string" },
+                  "price": { "type": "number" },
+                  "description": { "type": "string" },
+                  "category": { "type": "string" },
+                  "image": { "type": "string" },
+                  "rating": {
+                    "type": "object",
+                    "properties": {
+                      "rate": { "type": "number" },
+                      "count": { "type": "integer" }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
